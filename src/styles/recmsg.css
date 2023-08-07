@@ -1,0 +1,26 @@
+.revcont{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.recmessagecont{
+    color: white;
+    background-color: black;
+    margin-left: 20px;
+    padding: 15px;
+    width: 35%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.msgtime{
+    align-items: end;
+    margin-top: 10px;
+    font-size: 11px;
+    color: rgb(154, 154, 154);
+}

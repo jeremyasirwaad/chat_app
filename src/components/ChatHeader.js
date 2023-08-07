@@ -7,9 +7,6 @@ export const ChatHeader = () => {
 			<div>
 				<span className="title">Chat Application</span>
 			</div>
-			<div className="lnrcont">
-				<span>Logout</span>
-			</div>
 		</div>
 	);
 };

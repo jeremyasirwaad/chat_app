@@ -1,0 +1,12 @@
+.usercard{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(208, 208, 208);
+}
+
+.usercard:hover{
+    cursor: pointer;
+    background-color: rgb(238, 238, 238);
+}
+
