@@ -69,8 +69,10 @@
 }
 
 .messages{
-    height: 100%;
+    height: calc(100% - 140px);
+    overflow-y: auto;
     padding-top: 30px;
+    padding-bottom: 40px;
 }
 
 .chatinput{

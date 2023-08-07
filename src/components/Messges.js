@@ -9,27 +9,32 @@ export const Messges = ({ id, participentid }) => {
 
 	useEffect(() => {
 		readdata();
-	}, []);
+	}, [participentid]);
 
 	const readdata = () => {
 		console.log(participentid);
 		const userref = ref(db, "users/" + id + "/chats/" + participentid);
 		onValue(userref, (snapshot) => {
 			const data = snapshot.val();
-			setlistmessages(Object.values(data));
+			if (data) {
+				setlistmessages(Object.values(data));
+			} else {
+				setlistmessages(null);
+			}
 		});
 	};
 
 	return (
 		<div>
-			{listmessages &&
-				listmessages.map((msg) => {
-					if (msg.sent == 0) {
-						return <SentMsg message={msg.message} time={msg.time} />;
-					} else {
-						return <RecvMsg message={msg.message} time={msg.time}></RecvMsg>;
-					}
-				})}
+			{listmessages
+				? listmessages.map((msg) => {
+						if (msg.sent == 0) {
+							return <SentMsg message={msg.message} time={msg.time} />;
+						} else {
+							return <RecvMsg message={msg.message} time={msg.time}></RecvMsg>;
+						}
+				  })
+				: "No Chats Available"}
 		</div>
 	);
 };

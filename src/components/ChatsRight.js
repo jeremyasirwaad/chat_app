@@ -6,6 +6,7 @@ import { db } from "../config/firebase_config";
 import { Messges } from "./Messges";
 
 export const ChatsRight = ({ userdata, chatparticipentid, id }) => {
+	console.log(chatparticipentid, "dataalsdas");
 	const [msg, setmsg] = useState("");
 	var today = new Date();
 
