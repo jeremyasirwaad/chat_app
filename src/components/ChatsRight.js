@@ -35,7 +35,7 @@ export const ChatsRight = ({ userdata, chatparticipentid, id }) => {
 				{chatparticipentid == "" ? (
 					<div className="nomsg">
 						<img src={chat_img} alt="" />
-						<span>Jothi's Real Time Chat App</span>
+						<span>Jothi's Real Time Chat-App</span>
 					</div>
 				) : (
 					<Messges id={id} participentid={chatparticipentid} />
